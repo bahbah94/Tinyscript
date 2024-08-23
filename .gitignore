@@ -1,1 +1,11 @@
-/target
+# Rust specific ignores
+target/
+Cargo.lock
+
+# IDE/editor specific ignores
+.idea/
+.vscode/
+*.iml
+*.DS_Store
+*.gitignore
+
