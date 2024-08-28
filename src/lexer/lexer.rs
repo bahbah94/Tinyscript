@@ -1,4 +1,4 @@
-#[derive(Debug, PartialEq)]
+#[derive(Debug, PartialEq,Clone)]
 pub enum Token{
 	
 	//keywords
@@ -98,6 +98,20 @@ impl Lexer {
                 '=' => {
                     self.advance();
                     return Token::Equal;
+                },
+
+                '>' => {
+                    self.advance();
+                    return Token::GreaterThan
+                },
+                '<' => {
+                    self.advance();
+                    return Token::LessThan
+                },
+
+                '!' => {
+                    self.advance();
+                    return Token::NotEqual
                 },
 
                 // Delimiters
